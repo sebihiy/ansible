@@ -4,12 +4,12 @@
 Ansible is an open source, powerful automation software for configuring, managing and deploying software applications on the nodes without any downtime just by using SSH.
 
 #### My Environment Setup :
-IP Address	 :	192.168.1.54
+Master : 192.168.1.54
 
 #### Remote Nodes :
-Node 1: 192.168.1.51
-Node 2: 192.168.1.52
-Node 3: 192.168.1.53
+Node 1 : 192.168.1.51
+Node 2 : 192.168.1.52
+Node 3 : 192.168.1.53
 
 ### Step 1: Installing Controlling Machine – Ansible
 $ sudo yum install ansible -y
