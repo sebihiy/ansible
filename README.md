@@ -7,6 +7,7 @@ Ansible is an open source, powerful automation software for configuring, managin
 Master : 192.168.1.54
 
 #### Remote Nodes :
+
 Node 1 : 192.168.1.51
 Node 2 : 192.168.1.52
 Node 3 : 192.168.1.53
@@ -19,6 +20,7 @@ $ ansible --version
 $ ssh-keygen -t rsa -b 4096 -C "sebihiy@tyahoo.fr"
 
 After creating SSH Key successfully, now copy the created key to all three remote server’s.
+
 $ ssh-copy-id root@192.168.1.51
 $ ssh-copy-id root@192.168.1.52
 $ ssh-copy-id root@192.168.1.53
