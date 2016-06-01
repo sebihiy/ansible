@@ -1,4 +1,4 @@
-# Automate WordPress Deployments in Multiple Linux Servers - Centos 7
+## Automate WordPress Deployments in Multiple Linux Centos 7
 
 ### 1./ How to Install and Configure ‘Ansible’ :
 Ansible is an open source, powerful automation software for configuring, managing and deploying software applications on the nodes without any downtime just by using SSH.
@@ -38,5 +38,5 @@ $ ansible -m ping web-server
 #### check the partitions on all remote hosts
 $ ansible -m command -a "df -h" web-servers
 
-### Check memory usage on all remote hosts.
+#### Check memory usage on all remote hosts.
 $ ansible -m command -a "free -mt" web-servers
