@@ -3,10 +3,10 @@
 ### 1./ How to Install and Configure ‘Ansible’ :
 Ansible is an open source, powerful automation software for configuring, managing and deploying software applications on the nodes without any downtime just by using SSH.
 
-###My Environment Setup :
+#### My Environment Setup :
 IP Address	 :	192.168.1.54
 
-### Remote Nodes :
+#### Remote Nodes :
 Node 1: 192.168.1.51
 Node 2: 192.168.1.52
 Node 3: 192.168.1.53
@@ -30,10 +30,10 @@ $ sudo vim /etc/ansible/hosts
 192.168.1.52
 192.168.1.53
 
-### check our all 3 server by just doing a ping from my ansible server
+#### check our all 3 server by just doing a ping from my ansible server
 $ ansible -m ping web-server
 
-### check the partitions on all remote hosts
+#### check the partitions on all remote hosts
 $ ansible -m command -a "df -h" web-servers
 
 ### Check memory usage on all remote hosts.
