@@ -7,7 +7,6 @@ Ansible is an open source, powerful automation software for configuring, managin
 Master : 192.168.1.54
 
 #### Remote Nodes :
-
 Node 1 : 192.168.1.51
 Node 2 : 192.168.1.52
 Node 3 : 192.168.1.53
@@ -27,6 +26,7 @@ $ ssh-copy-id root@192.168.1.53
 
 ### Step 3: Creating Inventory File for Remote Hosts
 $ sudo vim /etc/ansible/hosts
+
 [web-servers]
 192.168.1.51
 192.168.1.52
