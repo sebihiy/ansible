@@ -1,0 +1,31 @@
+---
+# tasks file for wp-dependencies
+- name: Update packages (this is equivalent to yum update -y)
+  yum: name=* state=latest
+
+- name: Install dependencies for WordPress
+  yum: name={{ item }} state=present
+  with_items:
+        - httpd
+        - mariadb-server 
+        - mariadb
+        - php 
+        - php-mysql
+        - MySQL-python
+
+- name: Ensure MariaDB is running (and enable it at boot)
+  service: name=mariadb state=started enabled=yes
+
+- name: Copy ~/.my.cnf to nodes
+  copy: src=/root/.my.cnf dest=/root/.my.cnf
+
+- name: Create MariaDB database
+  mysql_db: name={{ wp_mysql_db }} state=present
+
+- name: Create MariaDB username and password
+  mysql_user:
+        login_user=root
+        login_password=YourMariaDBRootPasswordHere
+        name={{ wp_mysql_user }}
+        password={{ wp_mysql_password }}
+        priv=*.*:ALL

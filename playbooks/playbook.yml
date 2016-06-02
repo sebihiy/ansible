@@ -1,0 +1,4 @@
+- hosts: webservers
+  roles:
+        - wp-dependencies
+        - wp-install-config
