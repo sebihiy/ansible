@@ -40,3 +40,10 @@ $ ansible -m command -a "df -h" web-servers
 
 #### Check memory usage on all remote hosts.
 $ ansible -m command -a "free -mt" web-servers
+
+### 2./  Introducing Ansible Playbooks :
+
+Playbooks are plain text files written in the YAML format, and contain a list with items with one or more key/value pairs (also known as a “hash” or a “dictionary”). Inside each Playbook you will find one or more group of hosts (each one of these groups is also called a play) where the desired tasks are to be performed. 
+##### example : apache.yaml (download it  )
+
+
