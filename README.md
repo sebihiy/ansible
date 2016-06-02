@@ -63,7 +63,7 @@ $ cd /home/sebihiy/ansible/playbooks
 $ ansible-galaxy init wp-dependencies
 $ ansible-galaxy init wp-install-config
 
-ext confirms the newly created roles.
+Next confirms the newly created roles.
 
 $ ls -R /home/sebihiy/ansible/playbooks
 
