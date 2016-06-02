@@ -68,6 +68,7 @@ Next confirms the newly created roles.
 $ ls -R /home/sebihiy/ansible/playbooks
 
 We will begin by editing the following configuration files as indicated:
+
 1 - edit file  /home/sebihiy/ansible/playbooks/wp-dependencies/tasks/main.yml : 
 $ nano /home/sebihiy/ansible/playbooks/wp-dependencies/tasks/main.yml
 
