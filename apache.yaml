@@ -11,7 +11,7 @@
     copy: src=/static_files/index.html dest=/var/www/html/ mode=0644
     notify:
     - restart apache
-  - name: ensure apache is running (and enable it at boot)
+  - name: ensure apache is running (and enable it at boot.)
     service: name=httpd state=started enabled=yes
   handlers:
     - name: restart apache
