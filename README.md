@@ -47,9 +47,11 @@ $ sudo vim /etc/ansible/hosts
 $ ansible -m ping web-server
 
 #### check the partitions on all remote hosts
+
 $ ansible -m command -a "df -h" web-servers
 
 #### Check memory usage on all remote hosts.
+
 $ ansible -m command -a "free -mt" web-servers
 
 ### 2./  Introducing Ansible Playbooks :
@@ -59,7 +61,8 @@ Playbooks are plain text files written in the YAML format, and contain a list wi
 ##### example : 
 
 $ ansible-playbook /home/sebihiy/ansible/playbooks/apache.yml
-you find apache.yaml  it in : https://github.com/sebihiy/ansible/blob/master/apache.yaml
+
+- you find apache.yaml  it in : https://github.com/sebihiy/ansible/blob/master/apache.yaml
 
 ### 3./ Introducing Ansible Roles
 
@@ -70,8 +73,11 @@ This approach allows us to re-use these configuration files in separate projects
 #### Step 4: Creating Ansible Roles : 
 
 $ mkdir /home/sebihiy/ansible/playbooks
+
 $ cd /home/sebihiy/ansible/playbooks
+
 $ ansible-galaxy init wp-dependencies
+
 $ ansible-galaxy init wp-install-config
 
 Next confirms the newly created roles.
@@ -81,20 +87,25 @@ $ ls -R /home/sebihiy/ansible/playbooks
 We will begin by editing the following configuration files as indicated:
 
 1 - edit file  /home/sebihiy/ansible/playbooks/wp-dependencies/tasks/main.yml : 
+
 $ nano /home/sebihiy/ansible/playbooks/wp-dependencies/tasks/main.yml
 
 2 - edit file /home/sebihiy/ansible/playbooks/wp-dependencies/defaults/main.yml
+
 $ nano /home/sebihiy/ansible/playbooks/wp-dependencies/defaults/main.yml
 
 3- edit file /home/sebihiy/ansible/playbooks/wp-install-config/tasks/main.yml:
+
 $ nano /home/sebihiy/ansible/playbooks/wp-install-config/tasks/main.yml
 
 4- create file playbook.yml
+
 $ nano  playbook.yml
 
 5- For new database server installations where the root password is empty, such as in this case, unfortunately we need to setup the password for user root individually in every machine through mysql_secure_installation.
 
 Finally, it’s time to run these tasks by invoking our playbook:
+
 $ ansible-playbook playbook.yml
 
 #####Important: 
