@@ -80,6 +80,7 @@ $ nano /home/sebihiy/ansible/playbooks/wp-install-config/tasks/main.yml
 
 4- create file playbook.yml
 $ nano  playbook.yml
+
 5- For new database server installations where the root password is empty, such as in this case, unfortunately we need to setup the password for user root individually in every machine through mysql_secure_installation.
 
 Finally, it’s time to run these tasks by invoking our playbook:
